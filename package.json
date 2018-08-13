@@ -1,0 +1,37 @@
+{
+  "name": "Citimulator-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "FirstSun",
+  "license": "MIT",
+  "dependencies": {
+    "autobahn": "^18.3.2",
+    "axios": "^0.18.0",
+    "dotenv": "^6.0.0",
+    "fb": "^2.0.0",
+    "googleapis": "^32.0.0",
+    "joi": "^13.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.2.7",
+    "mongoose-double": "^0.0.1",
+    "websocket": "^1.0.26",
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "nodemon": "^1.18.3"
+  },
+  "scripts": {
+    "start:dev": "NODE_PATH=src nodemon --watch src/ src/index.js",
+    "crawler:dev": "NODE_PATH=src nodemon --watch src/crawler/ src/crawler/index.js"
+  }
+}
