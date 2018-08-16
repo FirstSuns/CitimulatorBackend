@@ -31,6 +31,14 @@ const User = new Schema({
       activated: { type: Boolean, default: false }
     }
   });
+
+User.statics.findByEmail = function(email) {
+  return this.findOne({email}).exec();
+};
+User.methods.validatePassword = function(password){
+  const hashed = hash(password);
+  return this.password === hashed;
+};
 User.statics.findExistancy = function({email, displayName}){
     return this.findOne({
         $or: [
